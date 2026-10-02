@@ -1,0 +1,639 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ClearTalk AI — AI Speech Analyzer</title>
+    <meta
+      name="description"
+      content="Analyze your speech in real-time. Get grammar corrections, filler word counts, and actionable suggestions to improve your speaking."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Animated background blobs -->
+    <div class="bg-blobs">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="logo">
+          <div class="logo-icon">
+            <svg
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" />
+              <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+              <line x1="12" y1="19" x2="12" y2="23" />
+              <line x1="8" y1="23" x2="16" y2="23" />
+            </svg>
+          </div>
+          <span class="logo-text">ClearTalk AI</span>
+        </div>
+        <nav class="nav-links">
+          <a href="#how-it-works">How it works</a>
+          <a href="#features">Features</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="container">
+        <h1 class="hero-title">
+          Speak. Analyze.<br /><span class="gradient-text">Improve.</span>
+        </h1>
+        <p class="hero-subtitle">
+          Record or upload your speech and get instant feedback on grammar,
+          filler words, and delivery — powered by AI intelligence.
+        </p>
+        <a href="#recorder" class="hero-cta">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" />
+            <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+          </svg>
+          Start Analyzing
+        </a>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+      <div class="container">
+        <h2 class="section-title">How It Works</h2>
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-number">01</div>
+            <div class="step-icon">🎙️</div>
+            <h3>Record or Upload</h3>
+            <p>
+              Use your microphone to record live or upload an existing audio
+              file.
+            </p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">02</div>
+            <div class="step-icon">📝</div>
+            <h3>Transcription</h3>
+            <p>
+              Your speech is converted to text using advanced speech
+              recognition.
+            </p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">03</div>
+            <div class="step-icon">🔍</div>
+            <h3>Deep Analysis</h3>
+            <p>
+              Grammar, filler words, and speech patterns are analyzed in detail.
+            </p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">04</div>
+            <div class="step-icon">💡</div>
+            <h3>Get Suggestions</h3>
+            <p>Receive actionable feedback to improve your speaking skills.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+      <div class="container">
+        <h2 class="section-title">Powerful Features</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">📖</div>
+            <h3>Grammar Check</h3>
+            <p>
+              Detects grammatical errors in your speech with suggested
+              corrections using LanguageTool.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🔇</div>
+            <h3>Filler Word Detection</h3>
+            <p>
+              Counts "um", "uh", "ahh", "like", "you know", "basically" and 15+
+              other fillers.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3>Speech Metrics</h3>
+            <p>
+              Word count, speaking pace, vocabulary richness, and sentence
+              structure analysis.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🎯</div>
+            <h3>Smart Suggestions</h3>
+            <p>
+              Personalized tips based on your specific speech patterns and
+              weaknesses.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recorder Section -->
+    <section class="recorder-section" id="recorder">
+      <div class="container">
+        <h2 class="section-title">Analyze Your Speech</h2>
+        <p class="section-subtitle">
+          Record live or upload an audio file to begin analysis
+        </p>
+
+        <div class="recorder-card">
+          <!-- Tab Switcher -->
+          <div class="tab-switcher">
+            <button class="tab-btn active" data-tab="record" id="tab-record">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"
+                />
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+              </svg>
+              Record Audio
+            </button>
+            <button class="tab-btn" data-tab="upload" id="tab-upload">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="17 8 12 3 7 8" />
+                <line x1="12" y1="3" x2="12" y2="15" />
+              </svg>
+              Upload File
+            </button>
+            <button class="tab-btn" data-tab="paste" id="tab-paste">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"
+                />
+                <rect x="8" y="2" width="8" height="4" rx="1" ry="1" />
+              </svg>
+              Paste Text
+            </button>
+          </div>
+
+          <!-- Record Tab -->
+          <div class="tab-panel active" id="panel-record">
+            <div class="record-area">
+              <div class="waveform-container" id="waveform-container">
+                <canvas id="waveform-canvas" width="600" height="100"></canvas>
+              </div>
+              <div class="record-timer" id="record-timer">00:00</div>
+              <div class="record-controls">
+                <button
+                  class="record-btn"
+                  id="record-btn"
+                  title="Start Recording"
+                >
+                  <div class="record-btn-inner"></div>
+                </button>
+              </div>
+              <p class="record-hint" id="record-hint">
+                Click the button to start recording
+              </p>
+            </div>
+          </div>
+
+          <!-- Upload Tab -->
+          <div class="tab-panel" id="panel-upload">
+            <div class="upload-area" id="upload-area">
+              <div class="upload-icon">
+                <svg
+                  width="48"
+                  height="48"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="17 8 12 3 7 8" />
+                  <line x1="12" y1="3" x2="12" y2="15" />
+                </svg>
+              </div>
+              <p class="upload-text">Drag & drop your audio file here</p>
+              <p class="upload-subtext">
+                or click to browse — supports WAV, MP3, OGG, WEBM
+              </p>
+              <input
+                type="file"
+                id="audio-file-input"
+                accept="audio/*"
+                hidden
+              />
+            </div>
+            <div class="uploaded-file" id="uploaded-file" style="display: none">
+              <div class="file-info">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M9 18V5l12-2v13" />
+                  <circle cx="6" cy="18" r="3" />
+                  <circle cx="18" cy="16" r="3" />
+                </svg>
+                <span id="uploaded-file-name"></span>
+              </div>
+              <button class="remove-file-btn" id="remove-file-btn">✕</button>
+            </div>
+            <!-- Audio Player -->
+            <div
+              class="audio-player-wrapper"
+              id="audio-player-wrapper"
+              style="display: none"
+            >
+              <audio
+                id="uploaded-audio-player"
+                controls
+                style="width: 100%; border-radius: 12px"
+              ></audio>
+              <div class="transcribe-action">
+                <button class="transcribe-btn" id="transcribe-btn">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"
+                    />
+                    <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+                    <line x1="12" y1="19" x2="12" y2="23" />
+                    <line x1="8" y1="23" x2="16" y2="23" />
+                  </svg>
+                  Transcribe Audio
+                </button>
+                <p class="transcribe-hint" id="transcribe-hint">
+                  Click to extract text from your audio file
+                </p>
+              </div>
+              <div
+                class="transcribe-progress"
+                id="transcribe-progress"
+                style="display: none"
+              >
+                <div class="transcribe-progress-bar">
+                  <div
+                    class="transcribe-progress-fill"
+                    id="transcribe-progress-fill"
+                  ></div>
+                </div>
+                <p id="transcribe-status">Listening to audio...</p>
+              </div>
+              <div
+                class="transcribe-result"
+                id="transcribe-result"
+                style="display: none"
+              >
+                <label
+                  >Transcribed Text
+                  <span style="font-size: 0.75rem; opacity: 0.6"
+                    >(edit if needed)</span
+                  ></label
+                >
+                <textarea
+                  id="upload-transcript-text"
+                  rows="5"
+                  placeholder="Transcribed text will appear here..."
+                ></textarea>
+              </div>
+            </div>
+          </div>
+
+          <!-- Paste Tab -->
+          <div class="tab-panel" id="panel-paste">
+            <div class="paste-area">
+              <textarea
+                id="paste-text"
+                placeholder="Paste or type your speech text here for analysis..."
+                rows="8"
+              ></textarea>
+            </div>
+          </div>
+
+          <!-- Analyze Button -->
+          <button class="analyze-btn" id="analyze-btn">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+            </svg>
+            Analyze Speech
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Loading State -->
+    <section class="loading-section" id="loading-section" style="display: none">
+      <div class="container">
+        <div class="loading-card">
+          <div class="loading-spinner"></div>
+          <h3 id="loading-text">Transcribing your speech...</h3>
+          <div class="loading-bar">
+            <div class="loading-bar-fill" id="loading-bar-fill"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results-section" id="results-section" style="display: none">
+      <div class="container">
+        <h2 class="section-title">Analysis Results</h2>
+
+        <!-- Score Overview -->
+        <div class="score-overview" id="score-overview">
+          <div class="score-card score-main">
+            <div class="score-ring">
+              <svg viewBox="0 0 120 120">
+                <circle class="score-ring-bg" cx="60" cy="60" r="52" />
+                <circle
+                  class="score-ring-fill"
+                  cx="60"
+                  cy="60"
+                  r="52"
+                  id="score-ring-fill"
+                />
+              </svg>
+              <div class="score-value" id="overall-score">0</div>
+            </div>
+            <h3>Overall Score</h3>
+            <p id="score-label">Analyzing...</p>
+          </div>
+          <div class="score-card">
+            <div class="metric-value" id="word-count">0</div>
+            <h3>Total Words</h3>
+          </div>
+          <div class="score-card">
+            <div class="metric-value" id="grammar-errors">0</div>
+            <h3>Grammar Issues</h3>
+          </div>
+          <div class="score-card">
+            <div class="metric-value" id="filler-count">0</div>
+            <h3>Filler Words</h3>
+          </div>
+          <div class="score-card">
+            <div class="metric-value" id="speaking-pace">0</div>
+            <h3>Words/Min</h3>
+          </div>
+        </div>
+
+        <!-- Transcript -->
+        <div class="result-panel" id="transcript-panel">
+          <div class="panel-header">
+            <h3>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                />
+                <polyline points="14 2 14 8 20 8" />
+                <line x1="16" y1="13" x2="8" y2="13" />
+                <line x1="16" y1="17" x2="8" y2="17" />
+              </svg>
+              Transcript
+            </h3>
+          </div>
+          <div class="panel-body">
+            <div class="transcript-text" id="transcript-text"></div>
+          </div>
+        </div>
+
+        <!-- Grammar Errors -->
+        <div class="result-panel" id="grammar-panel">
+          <div class="panel-header">
+            <h3>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
+                />
+                <line x1="12" y1="9" x2="12" y2="13" />
+                <line x1="12" y1="17" x2="12.01" y2="17" />
+              </svg>
+              Grammar Issues
+            </h3>
+            <span class="panel-badge" id="grammar-badge">0 issues</span>
+          </div>
+          <div class="panel-body">
+            <div id="grammar-list" class="grammar-list"></div>
+          </div>
+        </div>
+
+        <!-- Filler Words -->
+        <div class="result-panel" id="filler-panel">
+          <div class="panel-header">
+            <h3>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <line x1="15" y1="9" x2="9" y2="15" />
+                <line x1="9" y1="9" x2="15" y2="15" />
+              </svg>
+              Filler Words & Hesitations
+            </h3>
+            <span class="panel-badge filler-badge" id="filler-badge"
+              >0 found</span
+            >
+          </div>
+          <div class="panel-body">
+            <div id="filler-chart" class="filler-chart"></div>
+            <div id="filler-list" class="filler-list"></div>
+          </div>
+        </div>
+
+        <!-- Suggestions -->
+        <div class="result-panel" id="suggestions-panel">
+          <div class="panel-header">
+            <h3>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <line x1="12" y1="16" x2="12" y2="12" />
+                <line x1="12" y1="8" x2="12.01" y2="8" />
+              </svg>
+              Suggestions & Tips
+            </h3>
+          </div>
+          <div class="panel-body">
+            <div id="suggestions-list" class="suggestions-list"></div>
+          </div>
+        </div>
+
+        <!-- Speech Quiz -->
+        <div class="result-panel" id="quiz-panel">
+          <div class="panel-header">
+            <h3>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                <line x1="12" y1="17" x2="12.01" y2="17" />
+              </svg>
+              Grammar Quiz — Tenses & Spelling
+            </h3>
+            <span class="panel-badge quiz-badge" id="quiz-badge"
+              >5 questions</span
+            >
+          </div>
+          <div class="panel-body">
+            <p class="quiz-intro">
+              Test your grammar knowledge! Answer these 5 questions on tenses,
+              spelling, and correct usage:
+            </p>
+            <div id="quiz-container" class="quiz-container"></div>
+            <div class="quiz-actions" id="quiz-actions" style="display: none">
+              <button class="quiz-submit-btn" id="quiz-submit-btn">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                Submit Answers
+              </button>
+            </div>
+            <div class="quiz-results" id="quiz-results" style="display: none">
+              <div class="quiz-score-card" id="quiz-score-card"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Analyze Again -->
+        <div class="analyze-again">
+          <button class="analyze-btn" id="analyze-again-btn">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="1 4 1 10 7 10" />
+              <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10" />
+            </svg>
+            Analyze Another Speech
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+
+    <script src="app.js"></script>
+  </body>
+</html>
